@@ -7,7 +7,7 @@ export default class Blogpost {
         this.title = title
         this.post = post
         this.id = id || generateId()
-        this.comments = comments || ['great post', 'Makes Sense', 'Thanks for agreeing with me']
+        this.comments = comments || []
     }
 
     get Template() {

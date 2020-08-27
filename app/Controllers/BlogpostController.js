@@ -4,9 +4,11 @@ import Blogpost from "../Models/Blogpost.js";
 
 //Private
 function _drawBlogposts() {
+  STORE.saveState()
   let template = ''
   STORE.State.blogposts.forEach(p => template += p.Template)
   document.getElementById('posts').innerHTML = template
+
 }
 
 
