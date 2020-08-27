@@ -2,7 +2,7 @@ import Blogpost from "./Models/Blogpost.js";
 
 let _state = {
   /** @type {Blogpost[]} */
-  blogposts: []
+  blogposts: [new Blogpost({ title: "i love pie", post: " Pie is the greatest thing to have ever existed. Suck it cake lovers!!!" })]
 };
 
 class Store {

@@ -1,7 +1,13 @@
+import { generateId } from "../Utils.js"
+
+
+
 export default class Blogpost {
-    constructor({ title, post }) {
+    constructor({ title, post, id, comments }) {
         this.title = title
         this.post = post
+        this.id = id || generateId()
+        this.comments = comments || ['great post', 'Makes Sense', 'Thanks for agreeing with me']
     }
 
     get Template() {
@@ -9,9 +15,8 @@ export default class Blogpost {
         return /*html*/ `<div class="card ">
         <div class="card-body d-flex flex-column">
             <i class="fa fa-trash align-self-end" aria-hidden="true"></i>
-            <h5 class="card-title">Actual Blog Post</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                the card's content.</p>
+            <h5 class="card-title">${this.title}</h5>
+            <p class="card-text">${this.post}</p>
             <ul class="list-group">
                 <li class="list-group-item">Cras justo odio fa <i class="fa fa-trash"
                         aria-hidden="true"></i></li>
@@ -37,4 +42,15 @@ export default class Blogpost {
     </div>
 `
     }
+
+    get CommentsTemplate() {
+        let template = ''
+        this.comments.forEach(c => {
+            template += `                <li class="list-group-item">${c} <i class="fa fa-trash"
+        aria-hidden="true" onclick="app.blogpostController.removeComment('${this.id}', '${c}')"></i></li>
+        `
+        });
+        return template
+    }
+
 }

@@ -1,10 +1,12 @@
 import Blogpost from "../Models/Blogpost.js";
-import store from "../store.js";
+import STORE from "../store.js";
 
 
 console.log("Service Check");
 //Public
-class ValuesService { }
+class BlogpostService {
 
-const SERVICE = new ValuesService();
+}
+
+const SERVICE = new BlogpostService();
 export default SERVICE;
