@@ -14,7 +14,7 @@ export default class Blogpost {
 
         return /*html*/ `<div class="card ">
         <div class="card-body d-flex flex-column">
-            <i class="fa fa-trash align-self-end" aria-hidden="true"></i>
+            <i class="fa fa-trash align-self-end" aria-hidden="true" onclick="app.blogpostController.removePost('${this.id}')"></i>
             <h5 class="card-title">${this.title}</h5>
             <p class="card-text">${this.post}</p>
             <ul class="list-group">

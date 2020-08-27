@@ -26,6 +26,15 @@ export default class BlogpostController {
   }
 
 
+
+  removePost(id) {
+
+    BlogpostService.removePost(id)
+    _drawBlogposts();
+
+
+  }
+
   addComment(event, id) {
     event.preventDefault()
     let form = event.target

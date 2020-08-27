@@ -19,14 +19,14 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <form>
+                <form onsubmit="app.blogpostController.createPost(event)">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">New Blog</label>
-                        <input type="text" class="form-control" id="BlogTitle" placeholder="Blog Title">
+                        <input type="text" class="form-control" id="blogtitle" placeholder="Blog Title">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="BlogText" rows="3"></textarea>
-                        <button type="button" class="btn btn-outline-success">Post</button>
+                        <textarea class="form-control" id="blogtext" rows="3"></textarea>
+                        <button type="submit" class="btn btn-outline-success">Post</button>
                     </div>
                 </form>
             </div>
