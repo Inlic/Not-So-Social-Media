@@ -1,5 +1,5 @@
-export default class Value {
-    constructor(data) {
+export default class Blogpost {
+    constructor(title, post) {
         this.title = data.title
     }
 

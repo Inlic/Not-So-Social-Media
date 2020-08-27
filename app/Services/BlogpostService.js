@@ -1,8 +1,8 @@
-import Value from "../Models/Value.js";
+import Value from "../Models/Blogpost.js";
 import store from "../store.js";
 
 //Public
-class ValuesService {}
+class ValuesService { }
 
 const SERVICE = new ValuesService();
 export default SERVICE;
