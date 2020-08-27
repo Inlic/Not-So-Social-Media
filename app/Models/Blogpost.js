@@ -18,24 +18,15 @@ export default class Blogpost {
             <h5 class="card-title">${this.title}</h5>
             <p class="card-text">${this.post}</p>
             <ul class="list-group">
-                <li class="list-group-item">Cras justo odio fa <i class="fa fa-trash"
-                        aria-hidden="true"></i></li>
-                <li class="list-group-item">Dapibus ac facilisis in<i class="fa fa-trash"
-                        aria-hidden="true"></i></li>
-                <li class="list-group-item">Morbi leo risus<i class="fa fa-trash" aria-hidden="true"></i>
-                </li>
-                <li class="list-group-item">Porta ac consectetur ac<i class="fa fa-trash"
-                        aria-hidden="true"></i></li>
-                <li class="list-group-item">Vestibulum at eros<i class="fa fa-trash" aria-hidden="true"></i>
-                </li>
+            ${this.CommentsTemplate}
             </ul>
-            <form>
+            <form onsubmit = "app.blogpostController.addComment(event,'${this.id}')">
                 <div class="form-group mt-4">
                     <label for="exampleFormControlInput1">Leave a Comment</label>
                     <input type="text" class="form-control" id="comment" placeholder="Comment...">
                 </div>
                 <div class="form-group">
-                    <button type="button" class="btn btn-outline-success">Post</button>
+                    <button type="submit" class="btn btn-outline-success">Post</button>
                 </div>
             </form>
         </div>
