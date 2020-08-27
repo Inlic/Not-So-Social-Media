@@ -8,3 +8,9 @@ main{
   flex-grow: 1;} 
 
 footer{ }
+
+.fa{
+  color: red;
+  margin-left: 8px;
+  cursor: pointer;
+}
