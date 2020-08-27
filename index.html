@@ -15,7 +15,32 @@
         <h1>Hello not-so-social-media</h1>
 
     </header>
-    <main class="section">
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">New Blog</label>
+                        <input type="text" class="form-control" id="BlogTitle" placeholder="Blog Title">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="BlogText" rows="3"></textarea>
+                        <button type="button" class="btn btn-outline-success">Post</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6 " id="posts">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
 
