@@ -15,10 +15,8 @@ class BlogpostService {
   }
 
   addComment(newComment, id) {
-
     let post = STORE.State.blogposts.find(p => p.id == id)
     post.comments.push(newComment)
-
   }
 
   removeComment(id, comment) {
