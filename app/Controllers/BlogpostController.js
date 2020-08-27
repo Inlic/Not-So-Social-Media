@@ -11,15 +11,6 @@ function _drawBlogposts() {
 
 }
 
-
-
-
-
-
-
-
-
-
 //Public
 export default class BlogpostController {
   constructor() {
@@ -36,11 +27,8 @@ export default class BlogpostController {
   }
 
   removePost(id) {
-
     BlogpostService.removePost(id)
     _drawBlogposts();
-
-
   }
 
   addComment(event, id) {
@@ -55,9 +43,5 @@ export default class BlogpostController {
     BlogpostService.removeComment(id, comment)
     _drawBlogposts();
   }
-
-
-
-
 
 }
