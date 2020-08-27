@@ -1,7 +1,6 @@
 import Blogpost from "../Models/Blogpost.js";
 import STORE from "../store.js";
 
-
 console.log("Service Check");
 //Public
 class BlogpostService {
