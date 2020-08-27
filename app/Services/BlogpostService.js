@@ -5,6 +5,13 @@ import STORE from "../store.js";
 console.log("Service Check");
 //Public
 class BlogpostService {
+  createPost(newPost) {
+
+    let newContent = new Blogpost(newPost)
+    STORE.State.blogposts.push(newContent)
+
+
+  }
 
   removePost(id) {
     STORE.State.blogposts = STORE.State.blogposts.filter(p => p.id != id)

@@ -25,7 +25,13 @@ export default class BlogpostController {
     _drawBlogposts();
   }
 
-
+  createPost(event) {
+    event.preventDefault()
+    let form = event.target
+    let newPost = { title: form.blogtitle.value, post: form.blogtext.value }
+    BlogpostService.createPost(newPost)
+    _drawBlogposts();
+  }
 
   removePost(id) {
 
